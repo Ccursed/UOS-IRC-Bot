@@ -131,4 +131,12 @@ public class BotMain extends PircBot {
         }
     }
     
+    public boolean isUser(String name)
+    {
+        for(User user : getUsers(getChannels()[0]))
+            if(user.toString().equals(name))
+                return true;
+        return false;
+    }
+    
 }
