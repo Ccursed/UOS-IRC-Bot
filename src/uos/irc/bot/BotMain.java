@@ -130,5 +130,13 @@ public class BotMain extends PircBot {
             }
         }
     }
+
+    public boolean checkUserOp(String sender)
+    {
+        for(User user : getUsers(getChannels()[0]))
+            if(user.toString().equals(sender))
+                return user.isOp();
+        return false;      
+    }
     
 }
